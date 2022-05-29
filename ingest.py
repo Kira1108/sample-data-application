@@ -2,7 +2,8 @@ from extract import CsvLoader
 from db import db, init_db
 
 
-def app():
+def app(ds = "20220-05-01"):
+    
     init_db()
     brent = CsvLoader('./data/brent.csv').load()
     wti = CsvLoader('./data/brent.csv').load()
